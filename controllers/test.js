@@ -4,9 +4,9 @@
 var express = require('express');
 var router = express.Router();
 var config = require('config/config.json');
-const FB_TOKEN = 'EAACenlCJHQIBAGTH1R7ZB9qW08bbbSByS1IWNZBE7xIJ4TICP64kQckTctT4qdd3h9M8uHhBAzBxhs0RnmZB1pTNtscgmdaYa3AZBAsEVBciDQKDM8TOj56O9wxvJC9CXm1g4CzKEY7U65MUXbIXgFP8Vt178zAZAdejZBMPzkYwZDZD'
-const FB_VERIFY = 'Softtech2018'
-
+const FB_TOKEN = 'EAACenlCJHQIBAGTH1R7ZB9qW08bbbSByS1IWNZBE7xIJ4TICP64kQckTctT4qdd3h9M8uHhBAzBxhs0RnmZB1pTNtscgmdaYa3AZBAsEVBciDQKDM8TOj56O9wxvJC9CXm1g4CzKEY7U65MUXbIXgFP8Vt178zAZAdejZBMPzkYwZDZD';
+const FB_VERIFY = 'Softtech2018';
+const Bot = require('messenger-bot');
 
 
 //body parser intialize
