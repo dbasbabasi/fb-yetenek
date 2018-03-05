@@ -4,6 +4,8 @@ var http = require('http');
 mongoose = require('mongoose');
 var app = express();
 const Bot = require('messenger-bot');
+const FB_TOKEN = 'EAACenlCJHQIBAGTH1R7ZB9qW08bbbSByS1IWNZBE7xIJ4TICP64kQckTctT4qdd3h9M8uHhBAzBxhs0RnmZB1pTNtscgmdaYa3AZBAsEVBciDQKDM8TOj56O9wxvJC9CXm1g4CzKEY7U65MUXbIXgFP8Vt178zAZAdejZBMPzkYwZDZD';
+const FB_VERIFY = 'Softtech2018';
 // Edit these with your tokens
 
 
