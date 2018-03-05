@@ -16,7 +16,27 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/api/test', require("controllers/test"));
+let bot = new Bot({
+    token: FB_TOKEN,
+    verify: FB_VERIFY
+  })
+bot.on('error', (err) => {
+console.log(err.message)
+})
 
+bot.on('message', (payload, reply) => {
+    let text = payload.message.text
+
+    bot.getProfile(payload.sender.id, (err, profile) => {
+    if (err) throw err
+
+    reply({ text }, (err) => {
+        if (err) throw err
+
+        console.log(`Echoed back to ${profile.first_name} ${profile.last_name}: ${text}`)
+    })
+    })
+})
 
 var config = require('config/config.json');
 /*MONGODB_URI = config.MONGODB_URI;
@@ -35,4 +55,4 @@ mongoose.connection.on('connected', function (err) {
 });*/
 
 //creates http server 
-http.createServer(app).listen(process.env.PORT || 3000);
+http.createServer(bot.middleware()).listen(process.env.PORT || 3000);
