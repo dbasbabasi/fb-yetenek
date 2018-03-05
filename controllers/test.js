@@ -16,7 +16,7 @@ var bodyParser = require('body-parser');
 
 router.use(bodyParser.json());
 
-router.use('/', function (request, response, next) {
+router.get('/', function (request, response, next) {
 
     let bot = new Bot({
         token: FB_TOKEN,
