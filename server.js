@@ -3,6 +3,7 @@ var router = express.Router();
 var http = require('http');
 mongoose = require('mongoose');
 var app = express();
+const Bot = require('messenger-bot');
 // Edit these with your tokens
 
 
