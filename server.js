@@ -27,9 +27,6 @@ bot.on('error', (err) => {
 console.log(err.message)
 })
 
-bot.setGetStartedButton((payload, callback) => {
-    reply("deneme")
-})
 
 bot.on('message', (payload, reply) => {
     let text = payload.message.text
