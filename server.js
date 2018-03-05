@@ -3,6 +3,11 @@ var router = express.Router();
 var http = require('http');
 mongoose = require('mongoose');
 var app = express();
+// Edit these with your tokens
+
+
+
+
 require('rootpath')();
 //The boyd parser helps us to parse body content of the http request object. Actually body-parser is also another middleware function
 var bodyParser = require('body-parser');
