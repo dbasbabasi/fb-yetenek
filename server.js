@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 app.use('/api/test', require("controllers/test"));
 
+
 var config = require('config/config.json');
 /*MONGODB_URI = config.MONGODB_URI;
 mongoose.connect(MONGODB_URI);
