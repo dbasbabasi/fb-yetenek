@@ -1,1 +1,1 @@
-free: npm start
+free: node server.js
