@@ -28,7 +28,7 @@ console.log(err.message)
 })
 bot.on('message', (payload, reply) => {
     console.log('Received message from ' + payload.sender.id)
-    if (!payload.message.message) {
+    if (payload.message.message) {
       return reply({
         text: 'Softtech Yetenek Kuşağına Hoşgeldiniz'
       })
